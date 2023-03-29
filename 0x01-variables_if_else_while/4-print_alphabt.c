@@ -1,21 +1,17 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 /**
- * main - Prints the alphabet without q and e.
- *
+ * main - Prints all the letters of the alphabet except e and q
  * Return: Always 0 (Success)
  */
 int main(void)
 {
-	int i;
+	char letters;
 
-	for (i = 97; i < 123; i++)
+	for (letters = 'a' ; letters <= 'z' ; letters++)
 	{
-		if (i != 101 && i != 113)
-		{
-			putchar(i);
-		}
+		if (letters == 'e' || letters == 'q')
+			continue;
+	putchar(letters);
 	}
 	putchar('\n');
 	return (0);
