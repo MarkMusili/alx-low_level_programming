@@ -1,4 +1,4 @@
-#include "main.h"
+#include <stdio.h>
 /**
  * _sqrt_recursion - Print square root
  * @n: number to find the square root
@@ -16,5 +16,5 @@ int _sqrt_recursion(int n, int i)
 	else if (i * i > n)
 		return (-1);
 	else
-		return (actual_sqrt_recursion(n, i + 1));
+		return (_sqrt_recursion(n, i + 1));
 }
