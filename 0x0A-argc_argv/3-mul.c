@@ -1,11 +1,13 @@
 #include <stdio.h>
 #include "main.h"
 /**
+ * @s: String of integer
  * main - Print the product of two numbers
  * @argc: number of arguments
  * @argv: pointer to array of arguments passed
  * Return: 0 (success,no error) -1 (Error)
  */
+int _atoi(char *s)
 int main(int argc, char *argv[])
 {
 	int x, y, product;
