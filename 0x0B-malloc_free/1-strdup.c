@@ -19,12 +19,10 @@ char *_strdup(char *str)
 
 	my_ptr = malloc(sizeof(char) * (size + 1));
 
-	for (m = 0 ; m < size ; m++)
-		my_ptr[m] = str[m];
-	my_ptr[m] = '\0';
-
 	if (str == NULL)
 		return (NULL);
-	else
-		return (my_ptr);
+	for (m = 0 ; m < size ; m++)
+		my_ptr[m] = str[m];
+	my_ptr[m] = '\0'
+	return (my_ptr);
 }
