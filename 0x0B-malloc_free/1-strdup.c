@@ -23,6 +23,6 @@ char *_strdup(char *str)
 		return (NULL);
 	for (m = 0 ; m < size ; m++)
 		my_ptr[m] = str[m];
-	my_ptr[m] = '\0'
+	my_ptr[m] = '\0';
 	return (my_ptr);
 }
