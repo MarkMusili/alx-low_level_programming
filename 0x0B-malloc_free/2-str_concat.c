@@ -29,7 +29,7 @@ char *str_concat(char *s1, char *s2)
 	for (m = 0 ; m < len1 ; m++)
 		my_ptr[m] = s1[m];
 	for (n = 0 ; n < len2 ; n++)
-		my_ptr[m + n] = s2[m];
+		my_ptr[m + n] = s2[n];
 
 	my_ptr[m + n] = '\0';
 	return (my_ptr);
