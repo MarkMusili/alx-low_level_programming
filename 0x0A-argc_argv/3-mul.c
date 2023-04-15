@@ -7,7 +7,6 @@
  * @argv: pointer to array of arguments passed
  * Return: 0 (success,no error) -1 (Error)
  */
-int _atoi(char *s)
 int main(int argc, char *argv[])
 {
 	int x, y, product;
@@ -15,10 +14,10 @@ int main(int argc, char *argv[])
 	if (argc != 3)
 	{
 		printf("Error \n");
-		return (-1);
+		return (1);
 	}
-	x = _atoi(argv[1]);
-	y = _atoi(argv[2]);
+	x = atoi(argv[1]);
+	y = atoi(argv[2]);
 	product = x * y;
 
 	printf("%d \n", product);
