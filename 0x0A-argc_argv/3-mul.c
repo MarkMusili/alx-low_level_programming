@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include "main.h"
 /**
- * @s: String of integer
  * main - Print the product of two numbers
  * @argc: number of arguments
  * @argv: pointer to array of arguments passed
@@ -16,8 +15,8 @@ int main(int argc, char *argv[])
 		printf("Error \n");
 		return (1);
 	}
-	x = atoi(argv[1]);
-	y = atoi(argv[2]);
+	x = _atoi(argv[1]);
+	y = _atoi(argv[2]);
 	product = x * y;
 
 	printf("%d \n", product);
