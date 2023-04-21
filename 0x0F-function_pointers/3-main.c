@@ -24,13 +24,10 @@ int main(int argc, char *argv[])
 
 	op_func = get_op_func(argv[2]);
 
-	if (op_func == NULL)
-		return (99);
-
-	if ((argv[2][0] == '/' || argv[2][0] == '%' && num2 == 0))
+	if (op_func == NULL || argv[2][1] != '\0')
 	{
 		printf("Error\n");
-		return (100);
+		return (99);
 	}
 
 	result = op_func(num1, num2);
