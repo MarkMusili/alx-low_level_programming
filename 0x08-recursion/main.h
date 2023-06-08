@@ -5,6 +5,7 @@
  * Headers
  */
 #include <stddef.h>
+#include <string.h>
 
 /**
  * Prototypes
@@ -17,5 +18,7 @@ int factorial(int n);
 int _pow_recursion(int x, int y);
 int prime_checker(int i, int n);
 int is_prime_number(int n);
+int is_palindrome(char *s);
+int check_palindrome(char *s, int start, int end);
 
 #endif
