@@ -1,11 +1,6 @@
 #ifndef MAIN_H
 #define MAIN_H
-/**
- * Prototypes
- */
 
-/*
- * Header files
- */
-#include <stdio.h>
+int _putchar(char c);
+
 #endif
