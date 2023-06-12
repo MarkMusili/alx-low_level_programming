@@ -10,7 +10,7 @@
  */
 int main(int argc, char *argv[])
 {
-	int i, cents, coins[] = {25, 10, 5, 2, 1};
+	int i, cents, num, coins[] = {25, 10, 5, 2, 1};
 	int currentcoins = 0, total = 0;
 
 	if (argc != 2)
@@ -25,7 +25,8 @@ int main(int argc, char *argv[])
 		return (0);
 	}
 
-	for (i = 0; i < 4; i++)
+	num = sizeof(coins) / sizeof(coins[0]);
+	for (i = 0; i < num; i++)
 	{
 		currentcoins = cents / coins[i];
 		total += currentcoins;
