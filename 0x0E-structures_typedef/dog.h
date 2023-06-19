@@ -14,6 +14,9 @@ struct dog
 	char *owner;
 };
 
+/* Rename */
+typedef struct dog dog_t;
+
 /**
  * init_dog - Initializes the structure dog
  * @d: pointer to the structure
