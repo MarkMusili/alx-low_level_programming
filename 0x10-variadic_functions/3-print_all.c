@@ -18,27 +18,25 @@ void print_all(const char * const format, ...)
 	va_start(args, format);
 	while (*ptr != '\0')
 	{
-		if (*ptr == 'c')
+		switch (*ptr)
 		{
-			c = (char) va_arg(args, int);
-			printf("%c", c);
-		}
-		else if (*ptr == 'i')
-		{
-			i = va_arg(args, int);
-			printf("%d", i);
-		}
-		else if (*ptr == 'f')
-		{
-			f = va_arg(args, double);
-			printf("%f", f);
-		}
-		else if (*ptr == 's')
-		{
-			s = va_arg(args, char *);
-			if (s == NULL)
-				s = "(nil)";
-			printf("%s", s);
+			case 'c':
+				c = (char) va_arg(args, int);
+				printf("%c", c);
+				break;
+			case 'i':
+				i = va_arg(args, int);
+				printf("%d", i);
+				break;
+			case 'f':
+				f = va_arg(args, double);
+				printf("%f", f);
+				break;
+			case 's':
+				s = va_arg(args, char *);
+				if (s == NULL)
+					s = "(nil)";
+				printf("%s", s);
 		}
 		ptr++;
 		while (*ptr == 'c' || *ptr == 'i' || *ptr == 'f' || *ptr == 's')
@@ -46,7 +44,7 @@ void print_all(const char * const format, ...)
 			printf(", ");
 			break;
 		}
-	}	
+	}
 	printf("\n");
 	va_end(args);
 }
