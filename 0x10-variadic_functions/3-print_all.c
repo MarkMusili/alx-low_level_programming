@@ -9,15 +9,15 @@
 void print_all(const char * const format, ...)
 {
 	int i;
-	float f;
+	double f;
 	char *s;
 	char c;
-	va_list(args);
+	va_list args;
 	const char *ptr = format;
 
 	va_start(args, format);
 	while (*ptr != '\0')
-	{	
+	{
 		if (*ptr == 'c')
 		{
 			c = (char) va_arg(args, int);
@@ -46,7 +46,7 @@ void print_all(const char * const format, ...)
 			printf(", ");
 			break;
 		}
-	}
+	}	
 	printf("\n");
 	va_end(args);
 }
