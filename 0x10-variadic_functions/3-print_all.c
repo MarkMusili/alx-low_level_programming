@@ -63,7 +63,6 @@ void print_all(const char * const format, ...)
 {
 	va_list args;
 	const char *ptr = format;
-	int count = 0;
 
 	va_start(args, format);
 	while (*ptr != '\0')
@@ -87,13 +86,7 @@ void print_all(const char * const format, ...)
 				continue;
 		}
 		if (*ptr != '\0' && *(ptr + 1) != '\0')
-		{
-			if (count < 3)
-			{
-				printf(", ");
-				count++;
-			}
-		}
+			printf(", ");
 		ptr++;
 	}
 	printf("\n");
