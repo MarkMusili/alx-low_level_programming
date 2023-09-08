@@ -26,11 +26,12 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	if (new_node == NULL)
 		return (0);
 
-	/*Duplicate the key*/
-	new_node->key = strdup(key);
+	/*Handle the key*/
+	new_node->key = (char *)key;
 	if (new_node->key == NULL)
 	{
 		free(new_node);
+		new_node = NULL;
 		return (0);
 	}
 
@@ -40,6 +41,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	{
 		free(new_node->key);
 		free(new_node);
+		new_node = NULL;
 		return (0);
 	}
 
